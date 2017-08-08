@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Progressive Web Apps",
+    "href": "https://medium.com/tag/progressive-web-apps",
+    "feedUrl": "https://medium.com/feed/tag/progressive-web-apps"
+  },
+  {
+    "name": "Chrome",
+    "href": "https://medium.com/tag/chrome",
+    "feedUrl": "https://medium.com/feed/tag/chrome"
+  },
+  {
+    "name": "Javascript",
+    "href": "https://medium.com/tag/javascript",
+    "feedUrl": "https://medium.com/feed/tag/javascript"
+  },  
+  {
+    "name": "Web Development",
+    "href": "https://medium.com/tag/web-development",
+    "feedUrl": "https://medium.com/feed/tag/web-development"
+  },
+  {
+    "name": "html5",
+    "href": "https://medium.com/tag/html5",
+    "feedUrl": "https://medium.com/feed/tag/html5"
+  },  
+  {
+    "name": "CSS",
+    "href": "https://medium.com/tag/CSS",
+    "feedUrl": "https://medium.com/feed/tag/CSS"
+  },  
+  {
+    "name": "Offline First",
+    "href": "https://medium.com/tag/offline-first",
+    "feedUrl": "https://medium.com/feed/tag/offline-first"
+  }
+]
