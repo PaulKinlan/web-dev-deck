@@ -104,5 +104,47 @@ window.addEventListener('DOMContentLoaded', e => {
       .then(items => items.forEach(item => column.appendChild(item)))
   }
 });
+
+document.addEventListener('keyup', e=> {
+  const columns = document.querySelectorAll('section');
+  const selectedColumn = document.querySelector('section.selected');
+  let newSelectedColumn;
+  
+  if(e.code == 'ArrowLeft') {
+    //Move left
+    if(!!selectedColumn === false) {
+      newSelectedColumn = columns[columns.length - 1];
+    }
+    else {
+      selectedColumn.classList.remove('selected');
+      if(!!selectedColumn.previousElementSibling) {
+        newSelectedColumn = selectedColumn.previousElementSibling;
+      }
+      else {
+        newSelectedColumn = columns[columns.length - 1];
+      }
+    }
+  }
+  else if(e.code == 'ArrowRight') {
+    //Move right
+    if(!!selectedColumn === false) {
+      newSelectedColumn = columns[0];
+    }
+    else {
+      selectedColumn.classList.remove('selected');
+      if(!!selectedColumn.nextElementSibling) {
+        newSelectedColumn = selectedColumn.nextElementSibling;
+      }
+      else {
+        newSelectedColumn = columns[0];
+
+      }
+    }
+  }
+  newSelectedColumn.classList.add('selected');
+  newSelectedColumn.scrollIntoView({
+    "behaviour": "smooth"
+  });
+});
 </script>
 </html>
