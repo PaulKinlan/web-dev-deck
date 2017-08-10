@@ -17,24 +17,7 @@ const workbox = new WorkboxSW({clientsClaim: true, skipWaiting: true});
 
 
 // your custom service worker logic here
-workbox.precache([
-  {
-    "url": "/assets/templates/body.html",
-    "revision": "17268fe409e3de44c3308684f640230c"
-  },
-  {
-    "url": "/assets/templates/foot.html",
-    "revision": "553425f08ed806ecf0301e484581debf"
-  },
-  {
-    "url": "/assets/templates/head.html",
-    "revision": "d5397f0419f01d75c386948cd453b3d7"
-  },
-  {
-    "url": "/assets/templates/item.html",
-    "revision": "ac1801a84a4aabfa97868823e1110df5"
-  }
-]);
+workbox.precache([]);
 
 self.addEventListener('activate', function(event) {
   event.waitUntil(self.clients.claim());
