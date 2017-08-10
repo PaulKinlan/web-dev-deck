@@ -141,10 +141,10 @@ document.addEventListener('keyup', e=> {
       }
     }
   }
-  newSelectedColumn.classList.add('selected');
-  newSelectedColumn.scrollIntoView({
-    "behaviour": "smooth"
-  });
+  if(!!newSelectedColumn) {
+    newSelectedColumn.classList.add('selected');
+    newSelectedColumn.scrollIntoView({ "behaviour": "smooth" });
+  }
 });
 </script>
 </html>
