@@ -16,6 +16,10 @@
   "engines": {
     "node": "6.9.x"
   },
+  "repository" : { 
+    "type" : "git",
+    "url" : "https://github.com/paulkinlan/web-dev-deck.git"
+  },
   "license": "Apache-2.0",
   "keywords": [
     "node",
