@@ -15,13 +15,8 @@ const dataPath = '/data/'
 
 const workbox = new WorkboxSW({clientsClaim: true, skipWaiting: true});
 
-
 // your custom service worker logic here
 workbox.precache([]);
-
-self.addEventListener('activate', function(event) {
-  event.waitUntil(self.clients.claim());
-});
 
 getCompiledTemplate(`${assetPath}templates/body.html`);
 
