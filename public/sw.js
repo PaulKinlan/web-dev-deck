@@ -23,15 +23,15 @@ workbox.precache([
   },
   {
     "url": "/assets/templates/foot.html",
-    "revision": "b58c81230dcd3c3411a8e2c2a6e3f4a3"
+    "revision": "54e700831266e8ab7741024adfb42940"
   },
   {
     "url": "/assets/templates/head.html",
-    "revision": "a5d56b46335980430ef8ebab364168d9"
+    "revision": "6a7171dd6fad581fae9586b9198b726a"
   },
   {
     "url": "/assets/templates/item.html",
-    "revision": "160901c53442457c66cf28da1f599f99"
+    "revision": "816e64568e095e05d5fc6955e8b76caf"
   }
 ]);
 
