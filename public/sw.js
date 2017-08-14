@@ -15,7 +15,6 @@ const dataPath = '/data/'
 
 const workbox = new WorkboxSW({clientsClaim: true, skipWaiting: true});
 
-
 // your custom service worker logic here
 workbox.precache([
   {
@@ -24,21 +23,17 @@ workbox.precache([
   },
   {
     "url": "/assets/templates/foot.html",
-    "revision": "553425f08ed806ecf0301e484581debf"
+    "revision": "b58c81230dcd3c3411a8e2c2a6e3f4a3"
   },
   {
     "url": "/assets/templates/head.html",
-    "revision": "d5397f0419f01d75c386948cd453b3d7"
+    "revision": "a5d56b46335980430ef8ebab364168d9"
   },
   {
     "url": "/assets/templates/item.html",
-    "revision": "ac1801a84a4aabfa97868823e1110df5"
+    "revision": "160901c53442457c66cf28da1f599f99"
   }
 ]);
-
-self.addEventListener('activate', function(event) {
-  event.waitUntil(self.clients.claim());
-});
 
 getCompiledTemplate(`${assetPath}templates/body.html`);
 
