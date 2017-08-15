@@ -19,7 +19,7 @@ const workbox = new WorkboxSW({clientsClaim: true, skipWaiting: true});
 workbox.precache([
   {
     "url": "/assets/templates/body.html",
-    "revision": "17268fe409e3de44c3308684f640230c"
+    "revision": "713db3c2269375e3f35be10721665fcc"
   },
   {
     "url": "/assets/templates/foot.html",
@@ -27,11 +27,11 @@ workbox.precache([
   },
   {
     "url": "/assets/templates/head.html",
-    "revision": "6a7171dd6fad581fae9586b9198b726a"
+    "revision": "97551ca208ceca2727f9c832e44561c4"
   },
   {
     "url": "/assets/templates/item.html",
-    "revision": "816e64568e095e05d5fc6955e8b76caf"
+    "revision": "d8be335f33f782caed1dccf42c4df564"
   }
 ]);
 
