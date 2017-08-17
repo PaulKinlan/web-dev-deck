@@ -99,9 +99,10 @@ window.addEventListener('DOMContentLoaded', e => {
       })
       .then(doc => doc.querySelectorAll(doc.firstElementChild.nodeName === 'rss' ? 'item' : 'entry'))
       .then(items => Array.prototype.map.call(items, item => convertFeedItemToJSON(item)))
+      .then(items => items.reverse())
       .then(items => items.filter(item => !!!(document.getElementById(item.guid))))
       .then(items => items.map(item => applyTemplate(itemTemplate.cloneNode(true), item)))
-      .then(items => items.forEach(item => column.appendChild(item)))
+      .then(items => items.forEach(item => column.insertBefore(item, column.firstChild)));
   }
 });
   
@@ -109,8 +110,8 @@ document.addEventListener('click', e => {
   const target = e.target;
   if(target.nodeName === 'svg' && target.classList.contains('share')) {
     e.preventDefault();
-    const shareUrl = target.url || "";
-    const shareTitle = target.title || "";
+    const shareUrl = target.getAttribute("url") || "";
+    const shareTitle = target.getAttribute("title") || "";
     if(!!navigator.share) {
       navigator.share({
         url: shareUrl,
