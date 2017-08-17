@@ -2,12 +2,12 @@
 const cacheBust = '?' + Date.now(); // dirty hack for the install phase... saves me versioning at buildtime... if SW dies then this doesn't work as well...don't judge me
 importScripts(`/scripts/router.js`);
 importScripts(`/scripts/dot.js`);
-importScripts(`/scripts/DOMParser.js${cacheBust}`);
-importScripts(`/scripts/platform/web.js${cacheBust}`);
-importScripts(`/scripts/platform/common.js${cacheBust}`);
-importScripts(`/scripts/routes/index.js${cacheBust}`);
-importScripts(`/scripts/routes/root.js${cacheBust}`);
-importScripts(`/scripts/routes/proxy.js${cacheBust}`);
+importScripts(`/scripts/DOMParser.js`);
+importScripts(`/scripts/platform/web.js`);
+importScripts(`/scripts/platform/common.js`);
+importScripts(`/scripts/routes/index.js`);
+importScripts(`/scripts/routes/root.js`);
+importScripts(`/scripts/routes/proxy.js`);
 importScripts('/scripts/workbox-sw.js'); // not the actual filename
 
 const assetPath = '/assets/';
@@ -19,11 +19,11 @@ const workbox = new WorkboxSW({clientsClaim: true, skipWaiting: true});
 workbox.precache([
   {
     "url": "/assets/templates/body.html",
-    "revision": "713db3c2269375e3f35be10721665fcc"
+    "revision": "d4692fe9169ec9a1458f3dc11eb6921f"
   },
   {
     "url": "/assets/templates/foot.html",
-    "revision": "54e700831266e8ab7741024adfb42940"
+    "revision": "cec363093e60b87f646fe8904a5d4cd5"
   },
   {
     "url": "/assets/templates/head.html",
