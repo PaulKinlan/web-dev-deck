@@ -91,7 +91,7 @@ window.addEventListener('DOMContentLoaded', e => {
   const itemTemplate = document.getElementById('itemTemplate')
   for(let column of columns) {
     const feedUrl = column.dataset['url'];
-    fetch(`/proxy?url=${feedUrl}`)
+    fetch(`/proxy?url=${feedUrl}&force=1`)
       .then(feedResponse => feedResponse.text())
       .then(feedText => {
         const parser = new DOMParser();
