@@ -1,5 +1,4 @@
-/* VERSION: 0.0.3 */
-const cacheBust = '?' + Date.now(); // dirty hack for the install phase... saves me versioning at buildtime... if SW dies then this doesn't work as well...don't judge me
+/* VERSION: 0.0.4 */
 importScripts('/scripts/router.js');
 importScripts('/scripts/dot.js');
 importScripts('/scripts/DOMParser.js');
@@ -11,7 +10,7 @@ importScripts('/scripts/routes/proxy.js');
 importScripts('/scripts/workbox-sw.js'); // not the actual filename
 
 const assetPath = '/assets/';
-const dataPath = '/data/'
+const dataPath = '/data/';
 
 const workbox = new WorkboxSW({clientsClaim: true, skipWaiting: true});
 
@@ -23,7 +22,7 @@ workbox.precache([
   },
   {
     "url": "/assets/templates/foot.html",
-    "revision": "cec363093e60b87f646fe8904a5d4cd5"
+    "revision": "584e9aabe5facd2b8a2bf715c5e5a5b5"
   },
   {
     "url": "/assets/templates/head.html",
